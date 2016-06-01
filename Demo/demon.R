@@ -1,7 +1,8 @@
 # install the package 
-library("devtools")
-install_github("YunlongNie/sFPCA")
+# library("devtools")
+# install_github("YunlongNie/sFPCA")
 
+library(sFPCA)
 # a continuous response case 
 data(medfly)
 xmat = medfly$eggcount  # 26 days and 50 flies 
