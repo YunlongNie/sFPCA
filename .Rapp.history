@@ -1,0 +1,1082 @@
+train_y-inprod(beta_fd,train.fd)
+train_y-inprod(beta_fd,train.fd)-beta0
+scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%residuals
+inprod(beta_fd,train.fd)
+inprod(beta_fd,train.fd)
+scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%fitted
+scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%fitted - inprod(beta_fd,train.fd)
+inprod
+inprod(beta_fd,train.fd)
+scores_res%>%data.frame%>%select(matches("score"))
+scores_res%>%select(matches("score"))
+scores_res%>%select(matches("score"))%*%t(beta_func )
+scores_res%>%select(matches("score"))%*%beta_func
+(scores_res%>%select(matches("score")))%*%beta_func
+(scores_res%>%select(matches("score")))%*%as.matrix(beta_func)
+(scores_res%>%select(matches("score")))%*%t(as.matrix(beta_func))
+(scores_res%>%select(matches("score")))
+t(as.matrix(beta_func))
+(scores_res%>%select(matches("score")))%*%as.matrix(beta_func)
+as.matrix(beta_func)
+temp_matrix = (scores_res%>%select(matches("score")))
+temp_matrix%*%as.matrix(beta_func)
+as.numeric(temp_matrix)%*%as.matrix(beta_func)
+as.numeric(temp_matrix)
+as.matrix(temp_matrix)%*%as.matrix(beta_func)
+as.matrix(temp_matrix)
+as.matrix(temp_matrix)%*%as.matrix(beta_func)
+as.numeric(as.matrix(temp_matrix)%*%as.matrix(beta_func))
+inprod(beta_fd,train.fd)
+inprod(fpcs[[1]],train.fd)
+head(scores_res)
+inprod(fpcs[[1]],train.fd)
+inprod(fpcs[[1]],train.fd) + inprod(fpcs[[2]],train.fd)+inprod(fpcs[[3]],train.fd)
+beta_func[1]*inprod(fpcs[[1]],train.fd) + beta_func[2]*inprod(fpcs[[2]],train.fd)+beta_func[3]*inprod(fpcs[[3]],train.fd)
+as.numeric(as.matrix(temp_matrix)%*%as.matrix(beta_func))
+beta_fd = beta_func[1]*fpcs[[1]] + beta_func[2]*fpcs[[2]]+beta_func[3]*fpcs[[3]]
+inprod(beta_fd,train.fd)
+beta_fd = do.call(plus.fd,mapply(function(x, y) x*y, beta_func, fpcs,SIMPLIFY=FALSE))
+inprod(beta_fd,train.fd)
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), beta_func, fpcs,SIMPLIFY=FALSE))
+inprod(beta_fd,train.fd)
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), beta_func, fpcs,SIMPLIFY=FALSE))
+plot(beta_fd)
+beta_fd2 = beta_func[1]*fpcs[[1]] + beta_func[2]*fpcs[[2]]+beta_func[3]*fpcs[[3]]
+lines(beta_fd2)
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(y,x), beta_func, fpcs,SIMPLIFY=FALSE))
+plot(beta_fd)
+lines(beta_fd2)
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), fpcs, beta_func, SIMPLIFY=FALSE))
+plot(beta_fd)
+lines(beta_fd2)
+beta_func = list(as.vector(betas[-1]))
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), fpcs, beta_func, SIMPLIFY=FALSE))
+beta_func
+beta_func = list(betas[-1]))
+beta_func = list(betas[-1])
+beta_func
+beta_func = as.list(betas[-1])
+beta_func
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), fpcs, beta_func, SIMPLIFY=FALSE))
+plot(beta_fd)
+lines(beta_fd2)
+beta_func[1]*fpcs[[1]]
+beta_func = as.vector(betas[-1])
+beta_func[1]*fpcs[[1]]
+beta_func
+class(beta_func[1]*fpcs[[1]] )
+beta_fd = do.call(plus.fd,mapply(function(x, y) times.fd(x,y), fpcs[[1]], beta_func[1], SIMPLIFY=FALSE))
+x = fpcs[[1]]
+y = beta_func[1]
+times.fd(x,y)
+times.fd(x,y)==beta_func[1]*fpcs[[1]]
+all.equal(times.fd(x,y),beta_func[1]*fpcs[[1]])
+beta_func[2]*fpcs[[2]]
+beta_fd = mapply(function(x, y) times.fd(x,y), fpcs, beta_func, SIMPLIFY=FALSE)
+beta_fd
+beta_fd[[1]]
+beta_fd[[2]]
+beta_fd[[3]]
+all.equal(beta_func[2]*fpcs[[2]],beta_fd[[2]])
+all.equal(beta_func[3]*fpcs[[3]],beta_fd[[3]])
+beta_fd2 = beta_func[1]*fpcs[[1]] + beta_func[2]*fpcs[[2]]+beta_func[3]*fpcs[[3]]
+all.equal(beta_fd[[1]]+beta_fd[[2]]+beta_fd[[3]],beta_fd2)
+all.equal(do.call(plus.fd(beta_fd)),beta_fd2)
+all.equal(do.call(plus.fd,beta_fd)),beta_fd2)
+all.equal(do.call(plus.fd,beta_fd),beta_fd2)
+beta_fd = beta_func[1]*fpcs[[1]] + beta_func[2]*fpcs[[2]]+beta_func[3]*fpcs[[3]]
+beta_fd
+inprod(beta_fd,train.fd)
+train_y - inprod(beta_fd,train.fd)
+scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%residuals
+fpcs
+fpcs[[1]]
+fpcs[[1]]$coef
+fpcs[[1]]$coef = fpcs[[1]]$coef*beta_func[1]
+fpcs[[2]]$coef = fpcs[[2]]$coef*beta_func[2]
+fpcs[[3]]$coef = fpcs[[3]]$coef*beta_func[3]
+beta_fd2 = fpcs[[1]]+fpcs[[2]]+fpcs[[3]]
+beta_fd2
+all.equal(beta_fd2,beta_fd)
+beta_func[3]
+beta_func
+fpcs[[3]]$coef
+fpcs[[3]]$coef*-0.4062298
+fpcs
+fpca_res$har
+fpca_res$har[[3]]
+fpca_res$har[[3]]$coef
+fpca_res$har[[3]]$coef*beta_func[3]
+fpcs = fpca_res$har
+fpcs[[3]]*beta_func[3]
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}
+fpcs = fpca_res$har
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}
+i
+train_y - inprod(beta_fd,train.fd)
+scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%residuals
+train_y - inprod(beta_fd,train.fd) - beta0
+beta0
+train_y
+head(scores_res)
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef
+beta0
+mean(train_y)
+fitted_y =  inprod(beta_fd,train.fd) + beta0
+meany
+meanymean(train_y)
+mean(train_y)
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany
+residuals = y - fitted_y
+residuals
+y
+y = medfly$lifetime
+y
+residuals = y - fitted_y
+residuals
+xmat = medfly$eggcount  # 26 days and 50 flies
+dim(xmat)
+if (is.null(timepts)) timepts=1:nrow(xmat)
+timepts
+timepts=NULL
+if (is.null(timepts)) timepts=1:nrow(xmat)
+timepts
+sfpca = function(xmat,y,timepts=NULL,theta,lambda)#
+{#
+train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)#
+train_y = y; meany = mean(train_y);train_y = (train_y-meany)#
+library(fda)#
+if (is.null(timepts)) timepts=1:nrow(xmat)#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=range(timepts),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd, 1e2)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2,lambda=1e2)#
+W = inprod(spline.basis,spline.basis)#
+S = train.fd$coef #
+maty = matrix(rep(train_y,each=nrow(S)),nrow=nrow(S))#
+M = rowSums(maty*W%*%S)#
+MM = as.matrix(M)%*%t(as.matrix(M))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+fpca = function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM/(length(train_y)^2)#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+varprp  = round(head(eigen_res$values/sum(eigen_res$values),npc)*100,4)#
+print(varprp)#
+fd_list = lapply(1:npc,function(ipc)#
+{#
+cat(ipc)#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    })#
+list(har = fd_list,varprp = varprp)#
+}#
+#
+scores= function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    })#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+#
+names(traind) = paste0("score",1:npc)#
+#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+traind#
+    }#
+#
+theta=c(0.1);lambda=10;npc = 3#
+fpca_res = fpca(theta,lambda,npc=3)#
+scores_res = scores(theta,lambda,npc=3)#
+#######
+fpcs = fpca_res$har#
+fpcs_varprp = fpca_res$varprp#
+#
+library(dplyr)#
+#
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany#
+#
+return(list(beta_fd = beta_fd,fitted = fitted_y,sfpcs=fpcs,sfpcs_varprp=fpcs_varprp,theta=theta,lambda=lambda))#
+}
+sfpca = function(xmat,y,timepts=NULL,theta,lambda,npc_select = 3)#
+{#
+train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)#
+train_y = y; meany = mean(train_y);train_y = (train_y-meany)#
+library(fda)#
+if (is.null(timepts)) timepts=1:nrow(xmat)#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=range(timepts),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd, 1e2)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2,lambda=1e2)#
+W = inprod(spline.basis,spline.basis)#
+S = train.fd$coef #
+maty = matrix(rep(train_y,each=nrow(S)),nrow=nrow(S))#
+M = rowSums(maty*W%*%S)#
+MM = as.matrix(M)%*%t(as.matrix(M))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+fpca = function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM/(length(train_y)^2)#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+varprp  = round(head(eigen_res$values/sum(eigen_res$values),npc)*100,4)#
+print(varprp)#
+fd_list = lapply(1:npc,function(ipc)#
+{#
+cat(ipc)#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    })#
+list(har = fd_list,varprp = varprp)#
+}#
+#
+scores= function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    })#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+#
+names(traind) = paste0("score",1:npc)#
+#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+traind#
+    }#
+fpca_res = fpca(theta,lambda,npc=npc_select)#
+scores_res = scores(theta,lambda,npc=npc_select)#
+#######
+fpcs = fpca_res$har#
+fpcs_varprp = fpca_res$varprp#
+#
+library(dplyr)#
+#
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany#
+#
+return(list(beta_fd = beta_fd,fitted = fitted_y,sfpcs=fpcs,sfpcs_varprp=fpcs_varprp,theta=theta,lambda=lambda))#
+}
+sfpca(xmat,y,0.1,1e3,npc_select=2)
+sfpca = function(xmat,y,timepts=NULL,theta,lambda,npc_select = 3)#
+{#
+train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)#
+train_y = y; meany = mean(train_y);train_y = (train_y-meany)#
+library(fda)#
+if (is.null(timepts)) timepts=1:nrow(xmat)#
+print(timepts)#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=range(timepts),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd, 1e2)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2,lambda=1e2)#
+W = inprod(spline.basis,spline.basis)#
+S = train.fd$coef #
+maty = matrix(rep(train_y,each=nrow(S)),nrow=nrow(S))#
+M = rowSums(maty*W%*%S)#
+MM = as.matrix(M)%*%t(as.matrix(M))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+fpca = function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM/(length(train_y)^2)#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+varprp  = round(head(eigen_res$values/sum(eigen_res$values),npc)*100,4)#
+print(varprp)#
+fd_list = lapply(1:npc,function(ipc)#
+{#
+cat(ipc)#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    })#
+list(har = fd_list,varprp = varprp)#
+}#
+#
+scores= function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    })#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+#
+names(traind) = paste0("score",1:npc)#
+#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+traind#
+    }#
+fpca_res = fpca(theta,lambda,npc=npc_select)#
+scores_res = scores(theta,lambda,npc=npc_select)#
+#######
+fpcs = fpca_res$har#
+fpcs_varprp = fpca_res$varprp#
+#
+library(dplyr)#
+#
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany#
+#
+return(list(beta_fd = beta_fd,fitted = fitted_y,sfpcs=fpcs,sfpcs_varprp=fpcs_varprp,theta=theta,lambda=lambda))#
+}
+sfpca(xmat,y,0.1,1e3,npc_select=2)
+sfpca = function(xmat,y,theta,lambda,npc_select = 3,timepts=NULL)#
+{#
+train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)#
+train_y = y; meany = mean(train_y);train_y = (train_y-meany)#
+library(fda)#
+if (is.null(timepts)) timepts=1:nrow(xmat)#
+print(timepts)#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=range(timepts),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd, 1e2)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2,lambda=1e2)#
+W = inprod(spline.basis,spline.basis)#
+S = train.fd$coef #
+maty = matrix(rep(train_y,each=nrow(S)),nrow=nrow(S))#
+M = rowSums(maty*W%*%S)#
+MM = as.matrix(M)%*%t(as.matrix(M))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+fpca = function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM/(length(train_y)^2)#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+varprp  = round(head(eigen_res$values/sum(eigen_res$values),npc)*100,4)#
+print(varprp)#
+fd_list = lapply(1:npc,function(ipc)#
+{#
+cat(ipc)#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    })#
+list(har = fd_list,varprp = varprp)#
+}#
+#
+scores= function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    })#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+#
+names(traind) = paste0("score",1:npc)#
+#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+traind#
+    }#
+fpca_res = fpca(theta,lambda,npc=npc_select)#
+scores_res = scores(theta,lambda,npc=npc_select)#
+#######
+fpcs = fpca_res$har#
+fpcs_varprp = fpca_res$varprp#
+#
+library(dplyr)#
+#
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany#
+#
+return(list(beta_fd = beta_fd,fitted = fitted_y,sfpcs=fpcs,sfpcs_varprp=fpcs_varprp,theta=theta,lambda=lambda))#
+}
+sfpca(xmat,y,0.1,1e3,npc_select=2)
+sfpca(xmat,y,0.1,1e3,npc_select=5)
+res = sfpca(xmat,y,0.1,1e3,npc_select=5)
+sfpca = function(xmat,y,theta,lambda,npc_select = 3,timepts=NULL)#
+{#
+train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)#
+train_y = y; meany = mean(train_y);train_y = (train_y-meany)#
+library(fda)#
+if (is.null(timepts)) timepts=1:nrow(xmat)#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=range(timepts),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd, 1e2)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2,lambda=1e2)#
+W = inprod(spline.basis,spline.basis)#
+S = train.fd$coef #
+maty = matrix(rep(train_y,each=nrow(S)),nrow=nrow(S))#
+M = rowSums(maty*W%*%S)#
+MM = as.matrix(M)%*%t(as.matrix(M))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+fpca = function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM/(length(train_y)^2)#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+varprp  = round(head(eigen_res$values/sum(eigen_res$values),npc)*100,4)#
+#
+fd_list = lapply(1:npc,function(ipc)#
+{#
+cat(ipc)#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    })#
+list(har = fd_list,varprp = varprp)#
+}#
+#
+scores= function(theta,lambda,npc)#
+{#
+#
+Q =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%Q%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    })#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+#
+names(traind) = paste0("score",1:npc)#
+#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+traind#
+    }#
+fpca_res = fpca(theta,lambda,npc=npc_select)#
+scores_res = scores(theta,lambda,npc=npc_select)#
+#######
+fpcs = fpca_res$har#
+fpcs_varprp = fpca_res$varprp#
+#
+library(dplyr)#
+#
+betas = scores_res%>%data.frame%>%select(matches("score"),y)%>%lm(y~.,data=.)%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+fitted_y =  inprod(beta_fd,train.fd) + beta0+meany#
+#
+return(list(beta_fd = beta_fd,fitted = fitted_y,sfpcs=fpcs,sfpcs_varprp=fpcs_varprp,theta=theta,lambda=lambda))#
+}
+res = sfpca(xmat,y,0.1,1e3,npc_select=5)
+res$beta_fd
+plot(res$beta_fd)
+coef(res$beta_fd)
+basisfd(res$beta_fd)
+basis(res$beta_fd)
+res$fitted
+res$sfpcs
+res$theta
+res$lambda
+sfpcs_binary = function(tempdat,y,npc=1,theta= 0.5, lambda = 10,timepts=NULL)#
+{#
+#
+library(ggplot2)#
+library(fda)#
+library(dplyr)#
+train_matrix = tempdat;#
+rowM = rowMeans(train_matrix);train_matrix = sweep(train_matrix,1,rowM)#
+train_y = y#
+if (is.null(timepts)) timepts=1:nrow(train_matrix);#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=c(1,nrow(train_matrix)),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd,1)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2)#
+W = inprod(spline.basis,spline.basis)#
+### matrix S the coef matrix for the observed curves #
+S = train.fd$coef #
+M1 = W%*%S%*%as.matrix(train_y)#
+M2 = W%*%S%*%(matrix(1,nrow=length(train_y),ncol=1)-as.matrix(train_y))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+scores = function(theta,lambda,npc)#
+{#
+#
+MM = M1%*%t(M1)/sum(train_y) + M2%*%t(M2)/(length(train_y)-sum(train_y))#
+U =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%U%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    });#
+#
+fpcs = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    });#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+names(traind) = paste0("score",1:npc)#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+list(traind=traind,fpcs=fpcs)#
+}#
+#
+res= scores(theta,lambda,npc)#
+formula_pc = as.formula(paste0("y~",paste0(paste0("score",1:npc),collapse="+")))#
+glm_fit = glm(formula_pc,res$traind,family="binomial")#
+predy = ifelse(predict(glm_fit,newdata=testd,type="link")>0,1,0)#
+fpcs = res$fpcs#
+#
+betas = glm_fit%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+return(list(fitted=predy,beta_fd=beta_fd,sfpcs=fpcs,theta=theta,lambda=lambda))#
+}
+setwd('/Users/joha/Dropbox/Yunlong/Research_ideas/supervisored_FPCA/application_simulation/case3_4thPC_binary/')
+load("simulated_curves_scores_empirical_FALSE.Rdata")
+library(ggplot2)
+library(fda)
+ntimes = 1
+sd_signal = sd(simulate_scores[,4])
+linky = simulate_scores[,4]+rnorm(nrow(simulate_scores),0,rho*sd_signal)
+rho=0.5
+linky = simulate_scores[,4]+rnorm(nrow(simulate_scores),0,rho*sd_signal)
+y = rbinom(n=1000,size=1,prob=exp(linky)/(exp(linky)+1))
+tempdat = as.matrix(simulated_curve)
+sfpcs(tempdat,y,npc=2)
+sfpcs_binary(tempdat,y,npc=2)
+sfpcs_binary = function(tempdat,y,npc=1,theta= 0.5, lambda = 10,timepts=NULL)#
+{#
+library(ggplot2)#
+library(fda)#
+library(dplyr)#
+train_matrix = tempdat;#
+rowM = rowMeans(train_matrix);train_matrix = sweep(train_matrix,1,rowM)#
+train_y = y#
+if (is.null(timepts)) timepts=1:nrow(train_matrix);#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=c(1,nrow(train_matrix)),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd,1)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2)#
+W = inprod(spline.basis,spline.basis)#
+### matrix S the coef matrix for the observed curves #
+S = train.fd$coef #
+M1 = W%*%S%*%as.matrix(train_y)#
+M2 = W%*%S%*%(matrix(1,nrow=length(train_y),ncol=1)-as.matrix(train_y))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+scores = function(theta,lambda,npc)#
+{#
+#
+MM = M1%*%t(M1)/sum(train_y) + M2%*%t(M2)/(length(train_y)-sum(train_y))#
+U =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%U%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    });#
+#
+fpcs = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    });#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+names(traind) = paste0("score",1:npc)#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+list(traind=traind,fpcs=fpcs)#
+}#
+#
+res= scores(theta,lambda,npc)#
+formula_pc = as.formula(paste0("y~",paste0(paste0("score",1:npc),collapse="+")))#
+glm_fit = glm(formula_pc,res$traind,family="binomial")#
+predy = ifelse(predict(glm_fit,newdata=res$traind,type="link")>0,1,0)#
+fpcs = res$fpcs#
+#
+betas = glm_fit%>%coef#
+beta0 = as.vector(betas[1])#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+return(list(fitted=predy,beta_fd=beta_fd,sfpcs=fpcs,theta=theta,lambda=lambda))#
+}
+sfpcs_binary(tempdat,y,npc=2)
+res = sfpcs_binary(tempdat,y,npc=2)
+res$fitted
+y==res$fitted
+mean(y==res$fitted)
+res$beta_fd
+plot(res$beta_fd)
+sfpcs_binary = function(tempdat,y,npc=1,theta= 0.5, lambda = 10,timepts=NULL)#
+{#
+library(ggplot2)#
+library(fda)#
+library(dplyr)#
+train_matrix = tempdat;#
+rowM = rowMeans(train_matrix);train_matrix = sweep(train_matrix,1,rowM)#
+train_y = y#
+if (is.null(timepts)) timepts=1:nrow(train_matrix);#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=c(1,nrow(train_matrix)),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd,1)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2)#
+W = inprod(spline.basis,spline.basis)#
+### matrix S the coef matrix for the observed curves #
+S = train.fd$coef #
+M1 = W%*%S%*%as.matrix(train_y)#
+M2 = W%*%S%*%(matrix(1,nrow=length(train_y),ncol=1)-as.matrix(train_y))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+scores = function(theta,lambda,npc)#
+{#
+#
+MM = M1%*%t(M1)/sum(train_y) + M2%*%t(M2)/(length(train_y)-sum(train_y))#
+U =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%U%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    });#
+#
+fpcs = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    });#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+names(traind) = paste0("score",1:npc)#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+list(traind=traind,fpcs=fpcs)#
+}#
+#
+res= scores(theta,lambda,npc)#
+formula_pc = as.formula(paste0("y~",paste0(paste0("score",1:npc),collapse="+")))#
+glm_fit = glm(formula_pc,res$traind,family="binomial")#
+predy = ifelse(predict(glm_fit,newdata=res$traind,type="link")>0,1,0)#
+fpcs = res$fpcs#
+#
+betas = glm_fit%>%coef#
+beta0 = as.vector(betas[1])#
+print(betas)#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+return(list(fitted=predy,beta_fd=beta_fd,sfpcs=fpcs,theta=theta,lambda=lambda))#
+}
+res = sfpcs_binary(tempdat,y,npc=2)
+sfpcs_binary = function(tempdat,y,npc=1,theta= 0.5, lambda = 10,timepts=NULL)#
+{#
+library(ggplot2)#
+library(fda)#
+library(dplyr)#
+train_matrix = tempdat;#
+rowM = rowMeans(train_matrix);train_matrix = sweep(train_matrix,1,rowM)#
+train_y = y#
+if (is.null(timepts)) timepts=1:nrow(train_matrix);#
+norder=4 ## cubic B-spline#
+nbasis=norder+length(timepts)-2; (nbasis)#
+spline.basis=create.bspline.basis(rangeval=c(1,nrow(train_matrix)),nbasis,norder,timepts)#
+D2Lfd <- int2Lfd(m=2)#
+D2fdPar     <- fdPar(spline.basis, D2Lfd,1)#
+train.fd <- Data2fd(y=train_matrix, argvals=timepts,D2fdPar,nderiv=2)#
+W = inprod(spline.basis,spline.basis)#
+### matrix S the coef matrix for the observed curves #
+S = train.fd$coef #
+M1 = W%*%S%*%as.matrix(train_y)#
+M2 = W%*%S%*%(matrix(1,nrow=length(train_y),ncol=1)-as.matrix(train_y))#
+sqrM = function (X) #
+{#
+    EX <- eigen(X)#
+    VX <- EX$values#
+    QX <- EX$vectors#
+    YX <- QX %*% diag(1/sqrt(VX)) %*% t(QX)#
+    return(YX)#
+}#
+#
+scores = function(theta,lambda,npc)#
+{#
+#
+MM = M1%*%t(M1)/sum(train_y) + M2%*%t(M2)/(length(train_y)-sum(train_y))#
+U =theta/length(train_y)*W%*%S%*%t(S)%*%W+(1-theta)*MM#
+#
+D = inprod(spline.basis,spline.basis,Lfdobj1=2,Lfdobj2=2)#
+#
+G = W + lambda*D#
+#
+halfG_inv  = sqrM(G)#
+#
+tM = t(halfG_inv)%*%U%*%halfG_inv#
+eigen_res = eigen(tM)#
+#
+temp_score = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+train_score = inprod(fd,train.fd)#
+as.numeric(train_score)#
+    });#
+#
+fpcs = lapply(1:npc,function(ipc)#
+{#
+coef_pc= halfG_inv%*%as.matrix(eigen_res$vectors[,ipc])#
+fd= fd(coef=coef_pc,spline.basis)#
+fd#
+    });#
+#
+traind = do.call(cbind.data.frame,temp_score)#
+names(traind) = paste0("score",1:npc)#
+traind$theta=theta;traind$y=train_y;traind$lambda=lambda#
+list(traind=traind,fpcs=fpcs)#
+}#
+#
+res= scores(theta,lambda,npc)#
+formula_pc = as.formula(paste0("y~",paste0(paste0("score",1:npc),collapse="+")))#
+glm_fit = glm(formula_pc,res$traind,family="binomial")#
+predy = ifelse(predict(glm_fit,newdata=res$traind,type="link")>0,1,0)#
+fpcs = res$fpcs#
+#
+betas = glm_fit%>%coef#
+beta0 = as.vector(betas[1])#
+print(betas)#
+beta_func = as.vector(betas[-1])#
+#
+beta_fd = beta_func[1]*fpcs[[1]]#
+for (i in 2:length(beta_func))#
+{#
+    beta_fd  = beta_fd + beta_func[i]*fpcs[[i]]#
+}#
+return(list(fitted=predy,beta_fd=beta_fd,beta0 = beta0,sfpcs=fpcs,theta=theta,lambda=lambda))#
+}
+res$beta0
+res = sfpcs_binary(tempdat,y,npc=2)
+res$beta0
+getwd()
+ntimes = 1;rho=0.05
+sd_signal = sd(simulate_scores[,4])
+linky = simulate_scores[,4]+rnorm(nrow(simulate_scores),0,rho*sd_signal)
+y = rbinom(n=1000,size=1,prob=exp(linky)/(exp(linky)+1))
+tempdat = as.matrix(simulated_curve)
+res = sfpcs_binary(tempdat,y,npc=2)
+res$fitted
+mean(y==res$fitted)
+res = sfpcs_binary(tempdat,y,npc=2,theta=1)
+res$fitted
+mean(y==res$fitted)
+.packages()
+library()
+require("xtable")
+require("xtable2")
+calss(require("xtable2"))
+class(require("xtable2"))
+if(require("xtable2")) print('1')
+if(!require("xtable2")) print('1')
+if(!require("xtable2",quietly=TRUE)) print('1')
+if(!require("xtable2",warn.conflicts=FALSE)) print('1')
+if(!require("xtable2",quietly=TRUE)) print('1')
+if(!require("xtable2",character.only = TRUE)) print('1')
+installed.packages()
+rownames(installed.packages())
+stopifnot(all(c("fda","dplyr")%in%rownames(installed.packages())))
+stopifnot(all(c("fda2","dplyr")%in%rownames(installed.packages())))
+name_package = "SFPCA"#
+title_package = "R package for supervised FPCA"#
+build_dir = '/Users/joha/Dropbox/Rpackages/'#
+code_dir = "sfpca_source/Rcode_pk"
+(R_code = list.files(file.path(build_dir,code_dir), pattern=".R",full.names=TRUE))
+(package_dir = file.path(build_dir,name_package))
+name_package = "sFPCA"
+title_package = "R package for supervised FPCA"
+build_dir = '/Users/joha/Dropbox/Rpackages/'
+code_dir = "sfpca_source/Rcode_pk"
+(R_code = list.files(file.path(build_dir,code_dir), pattern=".R",full.names=TRUE))
+(package_dir = file.path(build_dir,name_package))
+library("devtools")
+library("roxygen2")
+library(dplyr)
+library(makingRpk)
+package_dir%>%dir.create
+DESCRIPTION_make(name_package=name_package,build_dir= build_dir,title_package=title_package,version="1.0")
+move_Rcode(code_dir = code_dir,name_package=name_package,build_dir=build_dir)
+roxygenise(package.dir=package_dir)
+git_Username = "YunlongNie"
+sprintf('cd %s', package_dir)%>%system
+"git init"%>%system
+sprintf('git remote add origin https://github.com/%s/%s.git',git_Username,name_package)%>%system(.,intern=TRUE)
+setwd(package_dir)
+"git init"%>%system
+sprintf('git remote add origin https://github.com/%s/%s.git',git_Username,name_package)%>%system(.,intern=TRUE)
+"git push -u origin master"%>%system(.,intern=TRUE)
+sprintf('git remote add origin https://github.com/%s/%s.git',git_Username,name_package)
+package_dir
+"git push -u origin master"%>%system(.,intern=TRUE)
+install_github(sprintf('%s/%s',git_Username,name_package))
+library(sFPCA)
+sfpca
