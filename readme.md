@@ -1,4 +1,4 @@
-intall the package by running the following code
+install the package by running the following code
 
 library("devtools")
 
