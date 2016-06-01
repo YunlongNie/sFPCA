@@ -10,17 +10,12 @@
 #' @import dplyr
 #' @examples
 #' \dontrun{
-# load("/Users/joha/Dropbox/Yunlong/Research_ideas/supervisored_FPCA/application_simulation/case3_4thPC_binary/simulated_curves_scores_empirical_FALSE.Rdata")
-# rho=0.05
-# sd_signal = sd(simulate_scores[,4])
-# linky = simulate_scores[,4]+rnorm(nrow(simulate_scores),0,rho*sd_signal)
-# y = rbinom(n=1000,size=1,prob=exp(linky)/(exp(linky)+1))
-# xmat = as.matrix(simulated_curve)
-# res = sfpcs_binary(xmat,y,npc=2,theta=1)
-# res$fitted
-# mean(y==res$fitted)
-# res$sfpcs
-# res$beta0
+#' data(binary_dat);xmat = binary_dat$x;y=binary_dat$y
+#' res = sfpcs_binary(xmat,y,npc=2,theta=1)
+#' res$fitted
+#' mean(y==res$fitted)
+#' res$sfpcs
+#' res$beta0
 #' }
 sfpcs_binary = function(xmat,y,npc=1,theta= 0.5, lambda = 10,timepts=NULL)
 {

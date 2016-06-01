@@ -10,18 +10,14 @@
 #' @import dplyr
 #' @examples
 #' \dontrun{
-#' load('/Users/joha/Dropbox/Yunlong/Research_ideas/supervisored_FPCA/medfly/application1/medfly.Rdata')
+#' data(medfly)
 #' xmat = medfly$eggcount  # 26 days and 50 flies 
 #' y = medfly$lifetime
 #' res = sfpca(xmat,y,0.1,1e3,npc_select=5)
-#' plot(res$beta_fd)
+#' plot(res$beta_fd,ylab="beta(t)")
 #' res$fitted 
 #' res$sfpcs
 #' }
-
-
-
-
 
 sfpca = function(xmat,y,theta,lambda,npc_select = 3,timepts=NULL)
 {

@@ -22,6 +22,12 @@ This function computes the sfpc when the response variable is binary.
 }
 \examples{
 \dontrun{
+data(binary_dat);xmat = binary_dat$x;y=binary_dat$y
+res = sfpcs_binary(xmat,y,npc=2,theta=1)
+res$fitted
+mean(y==res$fitted)
+res$sfpcs
+res$beta0
 }
 }
 
