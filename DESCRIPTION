@@ -1,0 +1,10 @@
+Package: sFPCA
+Type: Package
+Title: R package for supervised FPCA
+Version: 1.0
+Build Time: 2016-06-01 09:35:59
+Author: Yunlong
+Contact: nyunlong AT sfu.ca
+DESCRIPTION: no discription
+Url: https://github.com/YunlongNie/sFPCA
+RoxygenNote: 5.0.1
