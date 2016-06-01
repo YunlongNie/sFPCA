@@ -1,3 +1,49 @@
+abline(a=0,b=1,col=2,width=3)
+abline(a=0,b=1,col=2,lwd=3)
+rnorm(2,sd=1)
+x = c(-1,1)
+mu = x
+set.seed(1)
+(y = mu  +rnorm(2,sd=1))
+y-mu
+set.seed(2)
+(y = mu  +rnorm(2,sd=1))
+y-mu
+set.seed(3)
+(y = mu  +rnorm(2,sd=1))
+y-mu
+points(x,y,)
+abline(y~x)
+abline(lm(y~x))
+lm(y~x)
+lm(y~x)%>%predict(newdata=data.frame(x=0))
+ypred = lm(y~x)%>%predict(newdata=data.frame(x=0))
+yhat = lm(y~x)%>%predict(newdata=data.frame(x=0))
+points(x=0,y=yhat)
+points(x=0,y=0,col=2)
+abline(a=0,b=1,col=2,cex=2)
+points(x=0,y=0,col=2,cex=2)
+x = c(-0.5,0.5)#
+plot(x=0,y=0,type="n",xlim=c(-2,2),ylim=c(-2,2))#
+abline(a=0,b=1,col=2,lwd=3)#
+#
+x = c(-1,1)#
+mu = x#
+set.seed(3)#
+(y = mu  +rnorm(2,sd=1))#
+#
+points(x,y)#
+abline(lm(y~x))#
+yhat = lm(y~x)%>%predict(newdata=data.frame(x=0))#
+#
+points(x=0,y=yhat)#
+points(x=0,y=0,col=2,cex=2)
+points(x=0,y=0,col=2,cex=1.5)
+set.seed(4)
+(y = mu  +rnorm(2,sd=1))
+set.seed(4)
+(ynew = mu  +rnorm(2,sd=1))
+set.seed(4)
 (ynew = 0  +rnorm(1,sd=1))
 points(x=0,y=ynew)
 points(x=0,y=ynew,pch=15)
@@ -859,74 +905,48 @@ plot(res$beta_fd)
 plot(res$beta_fd,ylab="")
 plot(res$beta_fd,ylab="beta(t)")
 ??sfpcs_binary
-git_Username = "YunlongNie"
-name_package = "sFPCA"
-install_github(sprintf('%s/%s',git_Username,name_package))
-sprintf('%s/%s',git_Username,name_package)
-??install_github
-setwd('~/Dropbox/Rpackages/')
-library(makingRpk)
-git_push(git_dir="sFPCA/")
-git_push(git_dir="sFPCA/",commit=TRUE,comment="add readme")
-git_push(git_dir="~/Dropbox/sFPCA/",commit=TRUE,comment="add readme")
-git_push(git_dir="~/Dropbox/Rpackages/sFPCA/",commit=TRUE,comment="add readme")
-git_push(git_dir="sFPCA/")
-git_push(git_dir="~/Dropbox/Rpackages/sFPCA/",commit=FALSE,comment="add readme")
-git_push(git_dir="~/Dropbox/Rpackages/sFPCA/",commit=TRUE,comment="add readme")
-git_push(git_dir="~/Dropbox/Rpackages/sFPCA/",commit=TRUE,comment="add readme")
-load("/Users/joha/Dropbox/Yunlong/Research_ideas/supervisored_FPCA/application_simulation/case3_4thPC_binary/simulated_curves_scores_empirical_FALSE.Rdata")
-rho=0.05
-sd_signal = sd(simulate_scores[,4])
-linky = simulate_scores[,4]+rnorm(nrow(simulate_scores),0,rho*sd_signal)
-y = rbinom(n=1000,size=1,prob=exp(linky)/(exp(linky)+1))
-xmat = as.matrix(simulated_curve)
-y
-xmat
-names(xmat) = NULL
-xmat
-names(xmat) = ""
-xmat
-xmat = as.matrix(simulated_curve)
-xmat
-colnames(xmat)
-colnames(xmat)=""
-colnames(xmat)=NULL
-head(xmat)
-binary_dat = list(x=xmat,y=y)
-save(binary_dat,file="../sfpca_source/Data_pk/binary_dat.Rdata")
-load("/Users/joha/Dropbox/Rpackages/sfpca_source/Data_pk/medfly.Rdata")
-load("/Users/joha/Dropbox/Rpackages/sfpca_source/Data_pk/medfly.Rdata",vervose=1)
-load("/Users/joha/Dropbox/Rpackages/sfpca_source/Data_pk/medfly.Rdata",verbose=1)
-name_package = "sFPCA"#
-title_package = "R package for supervised FPCA"#
-build_dir = '/Users/joha/Dropbox/Rpackages/'#
-code_dir = "sfpca_source/Rcode_pk"#
-(R_code = list.files(file.path(build_dir,code_dir), pattern=".R",full.names=TRUE))#
+library(sFPCA)
+data(binary_dat)
+data(medfly)#
+xmat = medfly$eggcount  # 26 days and 50 flies #
+y = medfly$lifetime#
+res = sfpca(xmat,y,0.1,1e3,npc_select=5)#
+plot(res$beta_fd,ylab="beta(t)")#
+res$fitted #
+res$sfpcs
+data(binary_dat);xmat = binary_dat$x;y=binary_dat$y#
+res = sfpcs_binary(xmat,y,npc=2,theta=1)#
+res$fitted#
+mean(y==res$fitted)#
+res$sfpcs#
+res$beta0
+(demo_folder = file.path(build_dir,"sfpca_source/Demo")) # full path name
+build_dir = '/Users/joha/Dropbox/Rpackages/'
+(demo_folder = file.path(build_dir,"sfpca_source/Demo")) # full path name
+sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
 (package_dir = file.path(build_dir,name_package))
-move_Rcode(code_dir = code_dir,name_package=name_package,build_dir=build_dir)
-roxygenise(package.dir=package_dir)
-setwd(package_dir)
-library("roxygen2")
-library("devtools")
+sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
+name_package = "sFPCA"
+sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
+package_dir
+(package_dir = file.path(build_dir,name_package))
+sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
+git_push("~/Dropbox/Rpackages/sFPCA/")
+git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE, comment="add demo")
+install_github("YunlongNie/sFPCA")
 library("devtools")#
-library("roxygen2")#
-library(dplyr)
-roxygenise(package.dir=package_dir)
-setwd(package_dir)
-git_Username = "YunlongNie"
-git_push(git_dir = package_dir)
-git_push(git_dir = package_dir,commit=TRUE,comment="add new fun for window machine not quite complete")
-install_github(sprintf('%s/%s',git_Username,name_package))
+#
+install_github("YunlongNie/sFPCA")
 library(sFPCA)
-data(medly)
-data(medfly)
-datasets::medfly
-save(binary_dat,file="../sfpca_source/Data_pk/binary_dat.rda")
-medfly
-save(medly,file="../sfpca_source/Data_pk/medfly.rda")
-save(medfly,file="../sfpca_source/Data_pk/medfly.rda")
-git_push(git_dir = package_dir,commit=TRUE,comment="add new fun for window machine not quite complete")
-install_github(sprintf('%s/%s',git_Username,name_package))
+demo(sFPCA)
+demo("sFPCA")
+demo()
+demo(package="sFPCA")
+demo(package="sFPCA")
+git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE, comment="add demo")
+install_github("YunlongNie/sFPCA")
 library(sFPCA)
-data(medfly)
-medfly
+demo(package="sFPCA")
+demo(demo,package="sFPCA")
+demo("demo",package="sFPCA")
+demo("demon",package="sFPCA")
