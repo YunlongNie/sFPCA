@@ -10,7 +10,7 @@ y = medfly$lifetime
 res = sfpca(xmat,y,0.1,1e3,npc_select=5)
 plot(res$beta_fd,ylab="beta(t)")
 res$fitted 
-res$sfpcs
+plot(res$sfpcs[[1]], main="the first sFPC")
 
 
 
