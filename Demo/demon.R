@@ -16,8 +16,8 @@ plot(res$sfpcs[[1]], main="the first sFPC")
 
 # a binary response case 
 data(binary_dat);xmat = binary_dat$x;y=binary_dat$y
-res = sfpcs_binary(xmat,y,npc_select=2,theta=1,xmat_new = xmat)
+res = sFPCA::sfpcs_binary(xmat,y,npc_select=2,theta=1,xmat_new = xmat)
 res$fitted
 mean(y==res$fitted)
 res$sfpcs
-res$beta0
+res$intercept
