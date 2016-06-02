@@ -4,18 +4,21 @@
 \alias{sfpcs_binary}
 \title{This function computes the sfpc when the response variable is binary.}
 \usage{
-sfpcs_binary(xmat, y, npc = 1, theta = 0.5, lambda = 10, timepts = NULL)
+sfpcs_binary(xmat, y, npc_select = 2, theta = 0.5, lambda = 10,
+  timepts = NULL, xmat_new = NULL)
 }
 \arguments{
 \item{xmat}{a matrix. Each column represents a sample.}
 
 \item{y}{a vector either 0 or 1. The binary response variable for each sample.}
 
+\item{npc_select}{an integer. The number of FPCs required.}
+
 \item{theta}{between 0 and 1. The weight parameter.}
 
 \item{lambda}{a positive number. The smoothing parameter.}
 
-\item{npc_select}{an integer. The number of FPCs required.}
+\item{xmat_new}{a matrix. New dataset wish to predict on, each col corresponds to one sample.}
 }
 \description{
 This function computes the sfpc when the response variable is binary.
@@ -23,11 +26,12 @@ This function computes the sfpc when the response variable is binary.
 \examples{
 \dontrun{
 data(binary_dat);xmat = binary_dat$x;y=binary_dat$y
-res = sfpcs_binary(xmat,y,npc=2,theta=1)
+res = sfpcs_binary(xmat,y,npc_select=2,theta=1,xmat_new = xmat)
 res$fitted
-mean(y==res$fitted)
-res$sfpcs
-res$beta0
+mean(y==res$fitted) # fitted accuracy
+res$fitted # prediction on new data 
+res$sfpcs # sFPCs 
+res$beta_fd # coefficient function
 }
 }
 
