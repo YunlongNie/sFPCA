@@ -23,7 +23,7 @@
 
 sfpca_con = function(xmat,y,theta,lambda,npc_select = 3,timepts=NULL,xmat_new=NULL)
 {
-stopifnot(length(unique(y))<=2) 
+stopifnot(length(unique(y))>3) 
 stopifnot(all(c("fda","dplyr")%in%rownames(installed.packages()))) 
 train_matrix =xmat;rowM = rowMeans(train_matrix);train_matrix =sweep(train_matrix,1,rowM)
 train_y = y; meany = mean(train_y);train_y = (train_y-meany)
