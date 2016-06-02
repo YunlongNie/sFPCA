@@ -14,7 +14,7 @@
 #' data(medfly)
 #' xmat = medfly$eggcount  # 26 days and 50 flies 
 #' y = medfly$lifetime
-#' res = sfpca(xmat,y,0.1,1e3,npc_select=5,xmat_new = xmat[,1:10])
+#' res = sfpca_con(xmat,y,0.1,1e3,npc_select=5,xmat_new = xmat[,1:10])
 #' plot(res$beta_fd,ylab="beta(t)")
 #' res$fitted
 #' res$predicted 
