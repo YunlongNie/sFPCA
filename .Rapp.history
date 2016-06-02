@@ -1,3 +1,119 @@
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))
+segments(x[2],y_new[2],x[2],x[2],lty=2,col=4)
+text(x=x[2]+0.05,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)
+text(x=x[2]+0.05,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+text(x=x[2]-0.04,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+set.seed(10)#
+x = c(-0.5,0.5)#
+y = x+rnorm(2,mean=0,sd=1)#
+#
+plot(x,y,xlim=c(-0.6,0.6),ylim=c(-1,1.5),col=1)#
+abline(lm(y~x),col=1)#
+abline(a=0,b=1,col=2)#
+set.seed(19)#
+y_new = x+rnorm(2,mean=0,sd=1)#
+points(x,y_new,pch=19,col=4)#
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))
+segments(x[2]-0.09,y_new[2],x[2]-0.09,x[2],lty=3,col=2)
+segments(x[2]-0.09,y_new[2],x[2]-0.09,y[2],lty=3,col=2)
+text(x=x[2]-0.1,y=(y_new[2]+x[2])/2,labels=expression(e[2]}))
+text(x=x[2]-0.1,y=(y_new[2]+x[2])/2,labels=expression(e[2]))
+text(x=x[2]-0.1,y=(y_new[2]+x[2])/2,labels=expression(epsilon[2]^{(new)}+epsilon[2]=e[2]))
+text(x=x[2]-0.1,y=(y_new[2]+x[2])/2,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+set.seed(10)#
+x = c(-0.5,0.5)#
+y = x+rnorm(2,mean=0,sd=1)#
+#
+plot(x,y,xlim=c(-0.6,0.6),ylim=c(-1,1.5),col=1)#
+abline(lm(y~x),col=1)#
+abline(a=0,b=1,col=2)#
+set.seed(19)#
+y_new = x+rnorm(2,mean=0,sd=1)#
+points(x,y_new,pch=19,col=4)#
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))#
+#
+segments(x[2]-0.09,y_new[2],x[2]-0.09,y[2],lty=3,col=2)#
+text(x=x[2]-0.1,y=(y_new[2]+x[2])/2,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+text(x=x[2]-0.1,y=(y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+text(x=x[2]-0.1,y=y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+text(x=x[2]-0.2,y=y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+set.seed(10)#
+x = c(-0.5,0.5)#
+y = x+rnorm(2,mean=0,sd=1)#
+#
+plot(x,y,xlim=c(-0.6,0.6),ylim=c(-1,1.5),col=1)#
+abline(lm(y~x),col=1)#
+abline(a=0,b=1,col=2)#
+set.seed(19)#
+y_new = x+rnorm(2,mean=0,sd=1)#
+points(x,y_new,pch=19,col=4)#
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))#
+#
+segments(x[2]-0.09,y_new[2],x[2]-0.09,y[2],lty=3,col=2)#
+text(x=x[2]-0.2,y=y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))
+pdf('/Users/joha/Dropbox/SFU/TA/STAT350/9/doublenoise.pdf')#
+set.seed(10)#
+x = c(-0.5,0.5)#
+y = x+rnorm(2,mean=0,sd=1)#
+#
+plot(x,y,xlim=c(-0.6,0.6),ylim=c(-1,1.5),col=1)#
+abline(lm(y~x),col=1)#
+abline(a=0,b=1,col=2)#
+set.seed(19)#
+y_new = x+rnorm(2,mean=0,sd=1)#
+points(x,y_new,pch=19,col=4)#
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))#
+#
+segments(x[2]-0.09,y_new[2],x[2]-0.09,y[2],lty=3,col=2)#
+text(x=x[2]-0.2,y=y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))#
+#
+dev.off()
+pdf('/Users/joha/Dropbox/SFU/TA/STAT350/9/doublenoise.pdf')#
+set.seed(10)#
+x = c(-0.5,0.5)#
+y = x+rnorm(2,mean=0,sd=1)#
+#
+plot(x,y,xlim=c(0.2,0.6),ylim=c(-1,1.5),col=1)#
+abline(lm(y~x),col=1)#
+abline(a=0,b=1,col=2)#
+set.seed(19)#
+y_new = x+rnorm(2,mean=0,sd=1)#
+points(x,y_new,pch=19,col=4)#
+segments(x[2],y[2],x[2],x[2])#
+text(x=x[2]+0.05,y=(y[2]+x[2])/2,labels=expression(epsilon[2]))#
+segments(x[2]-0.03,y_new[2],x[2]-0.03,x[2],lty=2,col=4)#
+text(x=x[2]-0.06,y=(y_new[2]+y[2])/2,labels=expression(epsilon[2]^{(new)}))#
+#
+segments(x[2]-0.09,y_new[2],x[2]-0.09,y[2],lty=3,col=2)#
+text(x=x[2]-0.2,y=y_new[2]+0.1,labels=expression(epsilon[2]^{(new)}+epsilon[2]==e[2]))#
+#
+dev.off()
+points(x[2],x[2],pch=19,col=2)
+plot(x=0,y=0,type="n",xlim=c(-2,2),ylim=c(-2,2))
+x = c(-0.5,0.5)
+plot(x=0,y=0,type="n",xlim=c(-2,2),ylim=c(-2,2))
+abline(a=0,b=1)
+abline(a=0,b=1,col=2,size=2)
 abline(a=0,b=1,col=2,width=3)
 abline(a=0,b=1,col=2,lwd=3)
 rnorm(2,sd=1)
@@ -905,48 +1021,5 @@ plot(res$beta_fd)
 plot(res$beta_fd,ylab="")
 plot(res$beta_fd,ylab="beta(t)")
 ??sfpcs_binary
-library(sFPCA)
-data(binary_dat)
-data(medfly)#
-xmat = medfly$eggcount  # 26 days and 50 flies #
-y = medfly$lifetime#
-res = sfpca(xmat,y,0.1,1e3,npc_select=5)#
-plot(res$beta_fd,ylab="beta(t)")#
-res$fitted #
-res$sfpcs
-data(binary_dat);xmat = binary_dat$x;y=binary_dat$y#
-res = sfpcs_binary(xmat,y,npc=2,theta=1)#
-res$fitted#
-mean(y==res$fitted)#
-res$sfpcs#
-res$beta0
-(demo_folder = file.path(build_dir,"sfpca_source/Demo")) # full path name
-build_dir = '/Users/joha/Dropbox/Rpackages/'
-(demo_folder = file.path(build_dir,"sfpca_source/Demo")) # full path name
-sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
-(package_dir = file.path(build_dir,name_package))
-sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
-name_package = "sFPCA"
-sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
-package_dir
-(package_dir = file.path(build_dir,name_package))
-sprintf('cp -r %s %s',demo_folder,package_dir)%>%system(,intern=TRUE)
-git_push("~/Dropbox/Rpackages/sFPCA/")
-git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE, comment="add demo")
-install_github("YunlongNie/sFPCA")
-library("devtools")#
-#
-install_github("YunlongNie/sFPCA")
-library(sFPCA)
-demo(sFPCA)
-demo("sFPCA")
-demo()
-demo(package="sFPCA")
-demo(package="sFPCA")
-git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE, comment="add demo")
-install_github("YunlongNie/sFPCA")
-library(sFPCA)
-demo(package="sFPCA")
-demo(demo,package="sFPCA")
-demo("demo",package="sFPCA")
-demo("demon",package="sFPCA")
+git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE,comment="add readme")
+git_push("~/Dropbox/Rpackages/sFPCA/",commit=TRUE,comment="add readme")
