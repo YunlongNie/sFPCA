@@ -1,3 +1,10 @@
 .onAttach <- function(libname, pkgname) {
-  packageStartupMessage("Welcome to my package")
+  packageStartupMessage("
+     _______. _______ .______     ______      ___     
+    /       ||   ____||   _  \   /      |    /   \    
+   |   (----`|  |__   |  |_)  | |  ,----'   /  ^  \   
+    \   \    |   __|  |   ___/  |  |       /  /_\  \  
+.----)   |   |  |     |  |      |  `----. /  _____  \ 
+|_______/    |__|     | _|       \______|/__/     \__\
+")
 }
