@@ -1,7 +1,3 @@
-.onLoad <- function(libname, pkgname) 
-{
-  library.dynam("sFPCA", pkgname, libname)
-}
 
 .onAttach <- function(lib, pkg)
 {
